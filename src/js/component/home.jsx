@@ -4,7 +4,8 @@ import React, { useState } from "react";
 const Home = () => {
 	const [currentLight, setCurrentLight] = useState("green")
 	return (
-		<div className="wrapper h-100 align-items-center justify-content-center d-flex">
+		<div className="h-100 align-items-center justify-content-center d-flex">
+			<div className="support d-flex fixed-top"></div>
 			<div className="shell">
 				<div className="trafficLight">
 					<div className={currentLight === "red" ? "light lightOn redGlow" : "red light"} onClick={(e) => { currentLight !== "red" ? setCurrentLight("red") : setCurrentLight("") }}></div>
@@ -13,6 +14,7 @@ const Home = () => {
 				</div>
 			</div>
 		</div>
+		
 	);
 };
 
